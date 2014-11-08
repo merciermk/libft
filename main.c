@@ -51,7 +51,7 @@ UT_TEST(ft_memcpy)
 	UT_ASSERT_EQ(memcmp(b1, b2, 100), 0);
 	UT_ASSERT_EQ(b1, ft_memcpy(b1, b2, 0));
 }
-/*
+
 UT_TEST(ft_memccpy)
 {
 	char	buf1[] = "Ceci est un test.";
@@ -66,7 +66,7 @@ UT_TEST(ft_memccpy)
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 0, sizeof(buf1)), memccpy(buf2, buf1, 0, sizeof(buf1)));
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 'C', 10), buf2 + 1);
 }
-*/
+
 UT_TEST(ft_memmove)
 {
 	char	test[] = "abcdef";
@@ -733,7 +733,7 @@ int	main(void)
 	UT_ADD_TEST(ft_memset);
 	UT_ADD_TEST(ft_bzero);
 	UT_ADD_TEST(ft_memcpy);
-//	UT_ADD_TEST(ft_memccpy);
+	UT_ADD_TEST(ft_memccpy);
 	UT_ADD_TEST(ft_memmove);
 //	UT_ADD_TEST(ft_memchr);
 //	UT_ADD_TEST(ft_memcmp);
