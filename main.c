@@ -66,7 +66,7 @@ UT_TEST(ft_memccpy)
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 0, sizeof(buf1)), memccpy(buf2, buf1, 0, sizeof(buf1)));
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 'C', 10), buf2 + 1);
 }
-
+*/
 UT_TEST(ft_memmove)
 {
 	char	test[] = "abcdef";
@@ -75,7 +75,7 @@ UT_TEST(ft_memmove)
 	ft_memmove(test + 1, test, 0);
 	UT_ASSERT_EQ(strcmp(test, "aabcde"), 0);
 }
-
+/*
 UT_TEST(ft_memchr)
 {
 	char	test[] = "abcdef";
@@ -734,7 +734,7 @@ int	main(void)
 	UT_ADD_TEST(ft_bzero);
 	UT_ADD_TEST(ft_memcpy);
 //	UT_ADD_TEST(ft_memccpy);
-//	UT_ADD_TEST(ft_memmove);
+	UT_ADD_TEST(ft_memmove);
 //	UT_ADD_TEST(ft_memchr);
 //	UT_ADD_TEST(ft_memcmp);
 	UT_ADD_TEST(ft_strlen);
