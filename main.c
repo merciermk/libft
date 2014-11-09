@@ -191,7 +191,7 @@ UT_TEST(ft_strrchr)
 	buf[5] = 0;
 	UT_ASSERT_EQ(ft_strrchr(buf, 'a'), buf);
 }
-/*
+
 UT_TEST(ft_strstr)
 {
 	char	buf[] = "Ceci n'est pas une pipe.";
@@ -201,7 +201,7 @@ UT_TEST(ft_strstr)
 	UT_ASSERT_EQ(strstr(buf, "aaaaa"), ft_strstr(buf, "aaaaa"));
 	UT_ASSERT_EQ(ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), NULL);
 }
-
+/*
 UT_TEST(ft_strnstr)
 {
 	char	buf[10];
@@ -746,7 +746,7 @@ int	main(void)
 //	UT_ADD_TEST(ft_strlcat);
 	UT_ADD_TEST(ft_strchr);
 	UT_ADD_TEST(ft_strrchr);
-//	UT_ADD_TEST(ft_strstr);
+	UT_ADD_TEST(ft_strstr);
 //	UT_ADD_TEST(ft_strnstr);
 	UT_ADD_TEST(ft_strcmp);
 	UT_ADD_TEST(ft_strncmp);
