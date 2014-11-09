@@ -75,7 +75,7 @@ UT_TEST(ft_memmove)
 	ft_memmove(test + 1, test, 0);
 	UT_ASSERT_EQ(strcmp(test, "aabcde"), 0);
 }
-/*
+
 UT_TEST(ft_memchr)
 {
 	char	test[] = "abcdef";
@@ -85,7 +85,7 @@ UT_TEST(ft_memchr)
 	UT_ASSERT_EQ(ft_memchr(test, '\0', 7), memchr(test, '\0', 7));
 	UT_ASSERT_EQ(ft_memchr(test, 'z', 6), 0);
 }
-
+/*
 UT_TEST(ft_memcmp)
 {
 	char	*t = "ab\0ab";
@@ -735,7 +735,7 @@ int	main(void)
 	UT_ADD_TEST(ft_memcpy);
 	UT_ADD_TEST(ft_memccpy);
 	UT_ADD_TEST(ft_memmove);
-//	UT_ADD_TEST(ft_memchr);
+	UT_ADD_TEST(ft_memchr);
 //	UT_ADD_TEST(ft_memcmp);
 	UT_ADD_TEST(ft_strlen);
 	UT_ADD_TEST(ft_strdup);
