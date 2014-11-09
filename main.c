@@ -10,7 +10,7 @@
 ** Part 2 
 */
 
- #define NO_PART_2
+// #define NO_PART_2
 
 /*
 ** Same for bonus :
@@ -304,7 +304,7 @@ UT_TEST(ft_tolower)
 }
 
 #ifndef NO_PART_2
-	
+/*	
 UT_TEST(ft_memalloc)
 {
 	void	*mem1, *mem2;
@@ -465,7 +465,7 @@ UT_TEST(ft_strsplit)
 	UT_ASSERT_EQ(strcmp(tt[0], "coucou"), 0);
 	UT_ASSERT_EQ(tt[1], NULL);
 }
-*/
+
 UT_TEST(ft_itoa)
 {
 	UT_ASSERT_EQ(strcmp(ft_itoa(0), "0"), 0);
@@ -473,7 +473,7 @@ UT_TEST(ft_itoa)
 	UT_ASSERT_EQ(strcmp(ft_itoa(123456000), "123456000"), 0);
 	UT_ASSERT_EQ(strcmp(ft_itoa(-2147483648), "-2147483648"), 0);
 }
-
+*/
 UT_TEST(ft_putchar)
 {
 	int		out;
@@ -567,7 +567,7 @@ UT_TEST(ft_putchar_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "ab"), 0);
 }
-/*
+
 UT_TEST(ft_putstr_fd)
 {
 	int		p[2];
@@ -580,7 +580,7 @@ UT_TEST(ft_putstr_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "A QUE KOUKOU"), 0);
 }
-
+/*
 UT_TEST(ft_putendl_fd)
 {
 	int		p[2];
@@ -593,7 +593,7 @@ UT_TEST(ft_putendl_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "A QUE KOUKOU\n"), 0);
 }
-
+*/
 UT_TEST(ft_putnbr_fd)
 {
 	int		p[2];
@@ -609,7 +609,7 @@ UT_TEST(ft_putnbr_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "056-1230-2147483648"), 0);
 }
-*/
+
 #endif
 
 #ifndef NO_BONUS
@@ -780,9 +780,9 @@ int	main(void)
 //	UT_ADD_TEST(ft_putendl);
 	UT_ADD_TEST(ft_putnbr);
 	UT_ADD_TEST(ft_putchar_fd);
-//	UT_ADD_TEST(ft_putstr_fd);
+	UT_ADD_TEST(ft_putstr_fd);
 //	UT_ADD_TEST(ft_putendl_fd);
-//	UT_ADD_TEST(ft_putnbr_fd);
+	UT_ADD_TEST(ft_putnbr_fd);
 #endif
 #ifndef	NO_BONUS
 	UT_ADD_TEST(ft_lstnew);

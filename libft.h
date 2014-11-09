@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:11:48 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/09 16:38:16 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/09 18:59:33 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ int			ft_tolower(int c);
 //char *		ft_strjoin(char const *s1, char const *s2);
 //char *		ft_strtrim(char const *s);
 //char **		ft_strsplit(char const *s, char c);
-int		ft_atoi(const char *str);
+int			ft_atoi(const char *str);
 void		ft_putchar(char c);
 void		ft_putstr(char *str);
 void		ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putchar_fd(char c, int fd);
-//void			ft_putstr_fd(char const *s, int fd);
+void			ft_putstr_fd(char const *s, int fd);
 //void			ft_putendl_fd(char const *s, int fd);
-//void			ft_putnbr_fd(int n, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
