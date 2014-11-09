@@ -10,7 +10,7 @@
 ** Part 2 
 */
 
-// #define NO_PART_2
+ #define NO_PART_2
 
 /*
 ** Same for bonus :
@@ -228,14 +228,14 @@ UT_TEST(ft_strcmp)
 	UT_ASSERT(ft_strcmp("abc", "abd") < 0);
 	UT_ASSERT_NEQ(ft_strcmp("a", "abcde"), 0)
 }
-/*
+
 UT_TEST(ft_strncmp)
 {
 	UT_ASSERT_EQ(ft_strncmp("abc", "abcde", 3), 0);
 	UT_ASSERT_EQ(ft_strncmp("abc", "abc\0defg", 100), 0);
 	UT_ASSERT_NEQ(ft_strncmp("ab\0cde", "abcc\0e", 20), 0);
 }
-*/
+
 UT_TEST(ft_atoi)
 {
 	UT_ASSERT_EQ(ft_atoi(" -sfecf"), 0);
@@ -304,7 +304,7 @@ UT_TEST(ft_tolower)
 }
 
 #ifndef NO_PART_2
-/*	
+	
 UT_TEST(ft_memalloc)
 {
 	void	*mem1, *mem2;
@@ -465,7 +465,7 @@ UT_TEST(ft_strsplit)
 	UT_ASSERT_EQ(strcmp(tt[0], "coucou"), 0);
 	UT_ASSERT_EQ(tt[1], NULL);
 }
-
+*/
 UT_TEST(ft_itoa)
 {
 	UT_ASSERT_EQ(strcmp(ft_itoa(0), "0"), 0);
@@ -473,7 +473,7 @@ UT_TEST(ft_itoa)
 	UT_ASSERT_EQ(strcmp(ft_itoa(123456000), "123456000"), 0);
 	UT_ASSERT_EQ(strcmp(ft_itoa(-2147483648), "-2147483648"), 0);
 }
-*/
+
 UT_TEST(ft_putchar)
 {
 	int		out;
@@ -749,7 +749,7 @@ int	main(void)
 //	UT_ADD_TEST(ft_strstr);
 //	UT_ADD_TEST(ft_strnstr);
 	UT_ADD_TEST(ft_strcmp);
-//	UT_ADD_TEST(ft_strncmp);
+	UT_ADD_TEST(ft_strncmp);
 	UT_ADD_TEST(ft_atoi);
 	UT_ADD_TEST(ft_isalpha);
 	UT_ADD_TEST(ft_isdigit);
