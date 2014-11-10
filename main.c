@@ -22,7 +22,7 @@ UT_TEST(ft_memset)
 {
 	char	b1[100], b2[100];
 
-	ft_memset(b1, 130, 100);
+	ft_memset(b1, 42, 100);
 	memset(b2, 42, 100);
 	UT_ASSERT_EQ(memset(b1, 99, 0), ft_memset(b1, 99, 0));
 	UT_ASSERT_EQ(memcmp(b1, b2, 100), 0);
@@ -304,7 +304,7 @@ UT_TEST(ft_tolower)
 }
 
 #ifndef NO_PART_2
-/*	
+	
 UT_TEST(ft_memalloc)
 {
 	void	*mem1, *mem2;
@@ -349,7 +349,7 @@ UT_TEST(ft_strdel)
 	ft_strdel(&str);
 	UT_ASSERT_EQ(str, NULL);
 }
-
+/*
 UT_TEST(ft_strclr)
 {
 	char	str[] = "tttttt";
@@ -513,7 +513,7 @@ UT_TEST(ft_putstr)
 	close(out);
 	UT_ASSERT_EQ(strcmp(buf, "aaa"), 0);
 }
-/*
+
 UT_TEST(ft_putendl)
 {
 	int		out;
@@ -532,7 +532,7 @@ UT_TEST(ft_putendl)
 	close(out);
 	UT_ASSERT_EQ(strcmp(buf, "aa\n"), 0);
 }
-*/
+
 UT_TEST(ft_putnbr)
 {
 	int		out;
@@ -580,7 +580,7 @@ UT_TEST(ft_putstr_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "A QUE KOUKOU"), 0);
 }
-/*
+
 UT_TEST(ft_putendl_fd)
 {
 	int		p[2];
@@ -593,7 +593,7 @@ UT_TEST(ft_putendl_fd)
 	close(p[1]);
 	UT_ASSERT_EQ(strcmp(buf, "A QUE KOUKOU\n"), 0);
 }
-*/
+
 UT_TEST(ft_putnbr_fd)
 {
 	int		p[2];
@@ -759,11 +759,11 @@ int	main(void)
 	UT_ADD_TEST(ft_toupper);
 	UT_ADD_TEST(ft_tolower);
 #ifndef NO_PART_2
-//	UT_ADD_TEST(ft_memalloc);
-//	UT_ADD_TEST(ft_memdel);
-//	UT_ADD_TEST(ft_strnew);
-//	UT_ADD_TEST(ft_strdel);
-//	UT_ADD_TEST(ft_strclr);
+	UT_ADD_TEST(ft_memalloc);
+    UT_ADD_TEST(ft_memdel);
+	UT_ADD_TEST(ft_strnew);
+	UT_ADD_TEST(ft_strdel);
+	UT_ADD_TEST(ft_strclr);
 //	UT_ADD_TEST(ft_striter);
 //	UT_ADD_TEST(ft_striteri);
 //	UT_ADD_TEST(ft_strmap);
@@ -777,11 +777,11 @@ int	main(void)
 //	UT_ADD_TEST(ft_itoa);
 	UT_ADD_TEST(ft_putchar);
 	UT_ADD_TEST(ft_putstr);
-//	UT_ADD_TEST(ft_putendl);
+	UT_ADD_TEST(ft_putendl);
 	UT_ADD_TEST(ft_putnbr);
 	UT_ADD_TEST(ft_putchar_fd);
 	UT_ADD_TEST(ft_putstr_fd);
-//	UT_ADD_TEST(ft_putendl_fd);
+	UT_ADD_TEST(ft_putendl_fd);
 	UT_ADD_TEST(ft_putnbr_fd);
 #endif
 #ifndef	NO_BONUS

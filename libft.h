@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:11:48 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/09 18:59:33 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/10 15:48:47 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ int			ft_isprint(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 
-//void *		ft_memalloc(size_t size);
-//void			ft_memdel(void **ap);
-//char *		ft_strnew(size_t size);
+void *		ft_memalloc(size_t size);
+void			ft_memdel(void **ap);
+char *		ft_strnew(size_t size);
 //void			ft_strdel(char **as);
-//void			ft_strclr(char *s);
+void			ft_strclr(char *s);
 //void			ft_striter(char *s, void (*f)(char *));
 //void			ft_striteri(char *s, void (*f)(unsigned int, char *s));
 //char *		ft_strmap(char const *s, char (*f)(char));
@@ -67,7 +67,7 @@ void		ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
-//void			ft_putendl_fd(char const *s, int fd);
+void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
 #endif
