@@ -763,7 +763,7 @@ int	main(void)
     UT_ADD_TEST(ft_memdel);
 	UT_ADD_TEST(ft_strnew);
 	UT_ADD_TEST(ft_strdel);
-	UT_ADD_TEST(ft_strclr);
+//	UT_ADD_TEST(ft_strclr);
 //	UT_ADD_TEST(ft_striter);
 //	UT_ADD_TEST(ft_striteri);
 //	UT_ADD_TEST(ft_strmap);

@@ -6,13 +6,14 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 17:46:44 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/10 17:52:21 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/10 20:02:29 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_strdel(char **as)
 {
 	free (*as);
 	*as = NULL;
 }
-
