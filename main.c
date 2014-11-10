@@ -201,7 +201,7 @@ UT_TEST(ft_strstr)
 	UT_ASSERT_EQ(strstr(buf, "aaaaa"), ft_strstr(buf, "aaaaa"));
 	UT_ASSERT_EQ(ft_strstr(buf, "BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), NULL);
 }
-/*
+
 UT_TEST(ft_strnstr)
 {
 	char	buf[10];
@@ -221,7 +221,7 @@ UT_TEST(ft_strnstr)
 	buf[1] = 0;
 	UT_ASSERT_EQ(strnstr(buf, "deux", 10), ft_strnstr(buf, "deux", 10));
 }
-*/
+
 UT_TEST(ft_strcmp)
 {
 	UT_ASSERT_EQ(ft_strcmp("abc", "abc"), 0);
@@ -747,7 +747,7 @@ int	main(void)
 	UT_ADD_TEST(ft_strchr);
 	UT_ADD_TEST(ft_strrchr);
 	UT_ADD_TEST(ft_strstr);
-//	UT_ADD_TEST(ft_strnstr);
+	UT_ADD_TEST(ft_strnstr);
 	UT_ADD_TEST(ft_strcmp);
 	UT_ADD_TEST(ft_strncmp);
 	UT_ADD_TEST(ft_atoi);
