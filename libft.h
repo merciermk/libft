@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:11:48 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/10 15:48:47 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/11 12:05:48 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void *		ft_memcpy(void *dst, const void *src, size_t n);
 void *		ft_memccpy(void *dst, const void *src, int c, size_t n);
 void *		ft_memmove(void *dst, const void *src, size_t len);
 void *		ft_memchr(const void *s, int c, size_t n);
-//int			ft_memcmp(const void *s1, const void *s2, size_t n);
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t		ft_strlen(const char *s);
 char *		ft_strdup(const char *s1);
 char *		ft_strcpy(char *dst, const char *src);
@@ -52,9 +52,9 @@ void			ft_strdel(char **as);
 void			ft_strclr(char *s);
 //void			ft_striter(char *s, void (*f)(char *));
 //void			ft_striteri(char *s, void (*f)(unsigned int, char *s));
-//char *		ft_strmap(char const *s, char (*f)(char));
+char *		ft_strmap(char const *s, char (*f)(char));
 //char *		ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//int			ft_strequ(char const *s1, char const *s2);
+int			ft_strequ(char const *s1, char const *s2);
 //int			ft_strnequ(char const *s1, char const *s2, size_t n);
 //char *		ft_strsub(char const *s, unsigned int start, size_t len);
 //char *		ft_strjoin(char const *s1, char const *s2);

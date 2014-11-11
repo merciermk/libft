@@ -85,7 +85,7 @@ UT_TEST(ft_memchr)
 	UT_ASSERT_EQ(ft_memchr(test, '\0', 7), memchr(test, '\0', 7));
 	UT_ASSERT_EQ(ft_memchr(test, 'z', 6), 0);
 }
-/*
+
 UT_TEST(ft_memcmp)
 {
 	char	*t = "ab\0ab";
@@ -95,7 +95,7 @@ UT_TEST(ft_memcmp)
 	UT_ASSERT(ft_memcmp("aaa", "aab", 4) < 0);
 	UT_ASSERT_EQ(ft_memcmp("aww", "bpp", 0), 0);
 }
-*/
+
 UT_TEST(ft_strlen)
 {
 	UT_ASSERT_EQ(ft_strlen("chat"), strlen("chat"));
@@ -349,7 +349,7 @@ UT_TEST(ft_strdel)
 	ft_strdel(&str);
 	UT_ASSERT_EQ(str, NULL);
 }
-/*
+
 UT_TEST(ft_strclr)
 {
 	char	str[] = "tttttt";
@@ -357,7 +357,7 @@ UT_TEST(ft_strclr)
 	ft_strclr(str);
 	UT_ASSERT_EQ(memcmp(str, "\0\0\0\0\0\0", 7), 0);
 }
-
+/*
 void	it_test(char *c)
 {
 	*c = *c + 1;
@@ -383,7 +383,7 @@ UT_TEST(ft_striteri)
 	ft_striteri(str, iti_test);
 	UT_ASSERT_EQ(strcmp(str, "aCeGiK"), 0);
 }
-
+*/
 char	map_test(char c)
 {
 	return (c + 1);
@@ -397,7 +397,7 @@ UT_TEST(ft_strmap)
 	str = ft_strmap(str, map_test);
 	UT_ASSERT_EQ(ft_strcmp(str, "bcdef"), 0);
 }
-
+/*
 char	mapi_test(unsigned int i, char c)
 {
 	return (c + i);
@@ -411,14 +411,14 @@ UT_TEST(ft_strmapi)
 	str = ft_strmapi(str, mapi_test);
 	UT_ASSERT_EQ(ft_strcmp(str, "acegi"), 0);
 }
-
+*/
 UT_TEST(ft_strequ)
 {
 	UT_ASSERT_EQ(ft_strequ("", ""), 1);
 	UT_ASSERT_EQ(ft_strequ("abcDEF", "abcDEF"), 1);
 	UT_ASSERT_EQ(ft_strequ("abcDEF", "abcDEf"), 0);
 }
-
+/*
 UT_TEST(ft_strnequ)
 {
 	UT_ASSERT_EQ(ft_strnequ("ededeqdf", "", 0), 1);
@@ -736,7 +736,7 @@ int	main(void)
 	UT_ADD_TEST(ft_memccpy);
 	UT_ADD_TEST(ft_memmove);
 	UT_ADD_TEST(ft_memchr);
-//	UT_ADD_TEST(ft_memcmp);
+	UT_ADD_TEST(ft_memcmp);
 	UT_ADD_TEST(ft_strlen);
 	UT_ADD_TEST(ft_strdup);
 	UT_ADD_TEST(ft_strcpy);
@@ -760,15 +760,15 @@ int	main(void)
 	UT_ADD_TEST(ft_tolower);
 #ifndef NO_PART_2
 	UT_ADD_TEST(ft_memalloc);
-    UT_ADD_TEST(ft_memdel);
+	UT_ADD_TEST(ft_memdel);
 	UT_ADD_TEST(ft_strnew);
 	UT_ADD_TEST(ft_strdel);
-//	UT_ADD_TEST(ft_strclr);
+	UT_ADD_TEST(ft_strclr);
 //	UT_ADD_TEST(ft_striter);
 //	UT_ADD_TEST(ft_striteri);
-//	UT_ADD_TEST(ft_strmap);
+	UT_ADD_TEST(ft_strmap);
 //	UT_ADD_TEST(ft_strmapi);
-//	UT_ADD_TEST(ft_strequ);
+	UT_ADD_TEST(ft_strequ);
 //	UT_ADD_TEST(ft_strnequ);
 //	UT_ADD_TEST(ft_strsub);
 //	UT_ADD_TEST(ft_strjoin);
