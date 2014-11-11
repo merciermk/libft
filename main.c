@@ -153,7 +153,7 @@ UT_TEST(ft_strncat)
 	UT_ASSERT_EQ(strcmp(buf, "To be or not"), 0);
 	UT_ASSERT_EQ(buf, ft_strncat(buf, "", 0));
 }
-/*
+
 UT_TEST(ft_strlcat)
 {
 	char	buf[10];
@@ -170,7 +170,7 @@ UT_TEST(ft_strlcat)
 	memset(buf, 'a', 10);
 	UT_ASSERT_EQ(ft_strlcat(buf, "ccc", 10), 13);
 }
-*/
+
 UT_TEST(ft_strchr)
 {
 	char	buf[] = "Je suis un poisson.";
@@ -418,7 +418,7 @@ UT_TEST(ft_strequ)
 	UT_ASSERT_EQ(ft_strequ("abcDEF", "abcDEF"), 1);
 	UT_ASSERT_EQ(ft_strequ("abcDEF", "abcDEf"), 0);
 }
-/*
+
 UT_TEST(ft_strnequ)
 {
 	UT_ASSERT_EQ(ft_strnequ("ededeqdf", "", 0), 1);
@@ -426,7 +426,7 @@ UT_TEST(ft_strnequ)
 	UT_ASSERT_EQ(ft_strnequ("abc", "abc", 100), 1);
 	UT_ASSERT_EQ(ft_strnequ("abcde", "abdde", 5), 0);
 }
-
+/*
 UT_TEST(ft_strsub)
 {
 	char	*str;
@@ -743,7 +743,7 @@ int	main(void)
 	UT_ADD_TEST(ft_strncpy);
 	UT_ADD_TEST(ft_strcat);
 	UT_ADD_TEST(ft_strncat);
-//	UT_ADD_TEST(ft_strlcat);
+	UT_ADD_TEST(ft_strlcat);
 	UT_ADD_TEST(ft_strchr);
 	UT_ADD_TEST(ft_strrchr);
 	UT_ADD_TEST(ft_strstr);
@@ -769,7 +769,7 @@ int	main(void)
 	UT_ADD_TEST(ft_strmap);
 //	UT_ADD_TEST(ft_strmapi);
 	UT_ADD_TEST(ft_strequ);
-//	UT_ADD_TEST(ft_strnequ);
+	UT_ADD_TEST(ft_strnequ);
 //	UT_ADD_TEST(ft_strsub);
 //	UT_ADD_TEST(ft_strjoin);
 //	UT_ADD_TEST(ft_strtrim);
