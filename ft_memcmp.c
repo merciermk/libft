@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 11:46:12 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/11 11:54:39 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/11 18:16:21 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
-
-
-

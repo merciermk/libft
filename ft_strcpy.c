@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:37:36 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/06 19:07:56 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/11 18:19:32 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ char *ft_strcpy(char *dst, const char *scr)
 	dst[tmp] = '\0';
 	return (dst);
 }
-
