@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:11:48 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/11 14:52:01 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/11 17:33:07 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ void			ft_memdel(void **ap);
 char *		ft_strnew(size_t size);
 void			ft_strdel(char **as);
 void			ft_strclr(char *s);
-//void			ft_striter(char *s, void (*f)(char *));
-//void			ft_striteri(char *s, void (*f)(unsigned int, char *s));
+void			ft_striter(char *s, void (*f)(char *));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *s));
 char *		ft_strmap(char const *s, char (*f)(char));
 //char *		ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_strequ(char const *s1, char const *s2);
