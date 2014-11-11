@@ -357,7 +357,7 @@ UT_TEST(ft_strclr)
 	ft_strclr(str);
 	UT_ASSERT_EQ(memcmp(str, "\0\0\0\0\0\0", 7), 0);
 }
-/*
+
 void	it_test(char *c)
 {
 	*c = *c + 1;
@@ -383,7 +383,7 @@ UT_TEST(ft_striteri)
 	ft_striteri(str, iti_test);
 	UT_ASSERT_EQ(strcmp(str, "aCeGiK"), 0);
 }
-*/
+
 char	map_test(char c)
 {
 	return (c + 1);
@@ -764,8 +764,8 @@ int	main(void)
 	UT_ADD_TEST(ft_strnew);
 	UT_ADD_TEST(ft_strdel);
 	UT_ADD_TEST(ft_strclr);
-//	UT_ADD_TEST(ft_striter);
-//	UT_ADD_TEST(ft_striteri);
+	UT_ADD_TEST(ft_striter);
+	UT_ADD_TEST(ft_striteri);
 	UT_ADD_TEST(ft_strmap);
 //	UT_ADD_TEST(ft_strmapi);
 	UT_ADD_TEST(ft_strequ);
