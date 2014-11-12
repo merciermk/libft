@@ -397,7 +397,7 @@ UT_TEST(ft_strmap)
 	str = ft_strmap(str, map_test);
 	UT_ASSERT_EQ(ft_strcmp(str, "bcdef"), 0);
 }
-/*
+
 char	mapi_test(unsigned int i, char c)
 {
 	return (c + i);
@@ -411,7 +411,7 @@ UT_TEST(ft_strmapi)
 	str = ft_strmapi(str, mapi_test);
 	UT_ASSERT_EQ(ft_strcmp(str, "acegi"), 0);
 }
-*/
+
 UT_TEST(ft_strequ)
 {
 	UT_ASSERT_EQ(ft_strequ("", ""), 1);
@@ -436,13 +436,13 @@ UT_TEST(ft_strsub)
 	UT_ASSERT_EQ(strcmp(ft_strsub(str, 8, 8), "je serai"), 0);
 	UT_ASSERT_EQ(strcmp(ft_strsub(str, 0, 0), ""), 0);
 }
-
+*/
 UT_TEST(ft_strjoin)
 {
 	UT_ASSERT_EQ(strcmp(ft_strjoin("abc", "def"), "abcdef"), 0);
 	UT_ASSERT_EQ(strcmp(ft_strjoin("", ""), ""), 0);
 }
-
+/*
 UT_TEST(ft_strtrim)
 {
 	UT_ASSERT_EQ(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB"), 0);
@@ -767,11 +767,11 @@ int	main(void)
 	UT_ADD_TEST(ft_striter);
 	UT_ADD_TEST(ft_striteri);
 	UT_ADD_TEST(ft_strmap);
-//	UT_ADD_TEST(ft_strmapi);
+	UT_ADD_TEST(ft_strmapi);
 	UT_ADD_TEST(ft_strequ);
 	UT_ADD_TEST(ft_strnequ);
 //	UT_ADD_TEST(ft_strsub);
-//	UT_ADD_TEST(ft_strjoin);
+	UT_ADD_TEST(ft_strjoin);
 //	UT_ADD_TEST(ft_strtrim);
 //	UT_ADD_TEST(ft_strsplit);
 //	UT_ADD_TEST(ft_itoa);
