@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 13:08:34 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/12 22:05:07 by mmercier         ###   ########.fr       */
+/*   Created: 2014/11/12 21:54:46 by mmercier          #+#    #+#             */
+/*   Updated: 2014/11/12 21:57:23 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int		ft_strcmp(const char *s1, const char *s2)
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (*s1 && *s2 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*(unsigned char*)s1 - *(unsigned char *)s2);
+	char	*ret;
+	char	*temp_ret;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	ret = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (ret == NULL)
+		return (NULL);
+	temp_ret = ret;
+	while (*s1 != '\0')
+		*temp_ret++ = *s1++;
+	while (*s2 != '\0')
+		*temp_ret++ = *s2++;
+	*temp_ret = '\0';
+	return (ret);
 }
+
+

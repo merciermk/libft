@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 13:08:34 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/12 22:05:07 by mmercier         ###   ########.fr       */
+/*   Created: 2014/11/12 21:58:18 by mmercier          #+#    #+#             */
+/*   Updated: 2014/11/12 22:01:02 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int		ft_strcmp(const char *s1, const char *s2)
+
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
-	while (*s1 && *s2 && *s1 == *s2)
+	if (s && f)
 	{
-		s1++;
-		s2++;
+		int		i;
+		int		j;
+		char	*strc;
+
+		j = ft_strlen((char*)s);
+		i = 0;
+		strc = (char*)malloc(j * sizeof(strc));
+		while (s[i] != '\0')
+		{
+			strc[i] = f(s[i], i);
+			i++;
+		}
+		return (strc);
 	}
-	return (*(unsigned char*)s1 - *(unsigned char *)s2);
+	return (NULL);
 }
+
