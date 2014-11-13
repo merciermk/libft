@@ -6,7 +6,7 @@
 #    By: mmercier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/12 12:23:28 by mmercier          #+#    #+#              #
-#    Updated: 2014/11/12 12:32:31 by mmercier         ###   ########.fr        #
+#    Updated: 2014/11/13 21:13:23 by mmercier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,10 @@ FLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
-SRC =		ft_memset.c \
+SRC =		ft_strtrim.c \
+		ft_strsub.c \
+		ft_strsplit.c \
+		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
