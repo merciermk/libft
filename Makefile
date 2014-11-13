@@ -52,8 +52,10 @@ SRC =		ft_memset.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strmap.c \
+		ft_strmapi.c \
 		ft_strequ.c \
 		ft_strnequ.c \
+		ft_strjoin.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putendl.c \
