@@ -12,10 +12,16 @@
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-	int cpt;
-
-	cpt = ft_strlen(s);
-	return (ft_bzero((void*)s, cpt));
+	int		i;
+	if (s)
+	{
+		i = ft_strlen(s);
+		while (i >= 0)
+		{
+            s[i] = '\0';
+            i--;
+		}
+	}
 }
