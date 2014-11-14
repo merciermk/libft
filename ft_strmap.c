@@ -6,7 +6,7 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 11:54:12 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/12 21:50:40 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/14 10:18:43 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char		*dst;
 	size_t		i;
 
-	src = (char *) s;
+	src = (char *)s;
 	if (src && f)
 	{
 		dst = ft_strnew(ft_strlen(s));
