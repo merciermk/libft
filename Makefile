@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mmercier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/11/12 12:23:28 by mmercier          #+#    #+#              #
-#    Updated: 2014/11/13 21:13:23 by mmercier         ###   ########.fr        #
+#    Created: 2014/11/14 13:35:13 by mmercier          #+#    #+#              #
+#    Updated: 2014/11/14 13:35:23 by mmercier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,7 @@ FLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
-SRC =		ft_strtrim.c \
-		ft_strsub.c \
-		ft_strsplit.c \
-		ft_memset.c \
+SRC =		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
@@ -37,9 +34,9 @@ SRC =		ft_strtrim.c \
 		ft_strrchr.c \
 		ft_strstr.c \
 		ft_strnstr.c \
-		ft_atoi.c \
 		ft_strcmp.c \
 		ft_strncmp.c \
+		ft_atoi.c \
 		ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -58,6 +55,7 @@ SRC =		ft_strtrim.c \
 		ft_strmapi.c \
 		ft_strequ.c \
 		ft_strnequ.c \
+		ft_strsub.c \
 		ft_strjoin.c \
 		ft_putchar.c \
 		ft_putstr.c \
@@ -75,14 +73,13 @@ CC_FLAGS = -c -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME):
-	@$(CC) $(CC_FLAGS) $(SRC)
-	@ar rc $(NAME) $(OBJ)
+		@$(CC) $(CC_FLAGS) $(SRC)
+		@ar rc $(NAME) $(OBJ)
 
 clean:
-	@rm -f *.o
+		@rm -f *.o
 
 fclean: clean
-	@rm -f $(NAME)
+		@rm -f $(NAME)
 
 re: 	fclean all
-
