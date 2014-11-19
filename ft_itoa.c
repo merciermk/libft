@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/13 20:34:17 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/14 10:24:20 by mmercier         ###   ########.fr       */
+/*   Created: 2014/11/19 14:31:09 by mmercier          #+#    #+#             */
+/*   Updated: 2014/11/19 14:31:34 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_itoa(int n)
 {
-	size_t	i;
-	char	*to_return;
+	char		*ret;
+	int			temp_n;
+	size_t		size_ret;
+	char		sign;
 
-	if (s == NULL)
+	sign = (n < 0) ? -1 : 1;
+	size_ret = 2 + (n < 0);
+	temp_n = n;
+	while ((n = n / 10))
+		size_ret++;
+	n = temp_n;
+	if ((ret = (char *)malloc(sizeof(char) * size_ret--)) == NULL)
 		return (NULL);
-	i = 0;
-	to_return = (char*)malloc((len + 1) * sizeof(char));
-	if (to_return == NULL)
-		return (NULL);
-	while (i < len && s[(size_t)start + i] != '\0')
-	{
-		to_return[i] = s[(size_t)start + i];
-		i++;
-	}
-	to_return[len] = '\0';
-	return (to_return);
+	ret[size_ret--] = '\0';
+	ret[size_ret--] = sign * (n % 10) + '0';
+	while ((n = n / 10))
+		ret[size_ret--] = sign * (n % 10) + '0';
+	if (sign < 0)
+		ret[size_ret] = '-';
+	return (ret);
 }
+
