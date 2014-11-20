@@ -6,13 +6,13 @@
 /*   By: mmercier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/19 14:24:50 by mmercier          #+#    #+#             */
-/*   Updated: 2014/11/19 14:42:26 by mmercier         ###   ########.fr       */
+/*   Updated: 2014/11/20 13:24:19 by mmercier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	nothing(char c)
+static int			nothing(char c)
 {
 	return ((c == ' ') || (c == '\t') || (c == '\n'));
 }
@@ -25,7 +25,7 @@ static const char	*s_end(const char *str)
 	return (str);
 }
 
-char	*ft_strtrim(char const *s)
+char				*ft_strtrim(char const *s)
 {
 	char		*to_return;
 	const char	*begin;
@@ -45,5 +45,3 @@ char	*ft_strtrim(char const *s)
 	}
 	return (to_return);
 }
-
-
