@@ -69,5 +69,6 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_strsplit(char const *s, char c);
+char	*ft_mallocat(char *s1, char *s2)
 
 #endif
